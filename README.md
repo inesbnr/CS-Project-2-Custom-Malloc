@@ -14,22 +14,20 @@ Before utilizing the custom memory allocator, it's crucial to
 void initialize_heap() ;
 ```
 
-## Features
+## Features - Memory Allocation Functions
 
 - **`malloc`:** Allocates a block of memory.
 - **`free`:** Deallocates a previously allocated block of memory.
 - **`calloc`:** Allocates memory and initialize to zero.
 - **`realloc`:** Changes the size of the memory block.
 
-## Memory Allocation Functions
-
 ### `malloc`
 
 The `malloc` function allocates a block of memory of the specified size.
 
-'''c
+```c
 void* malloc(size_t size);
-'''
+```
 
 - If the size is less than or equal to 0, the function returns `NULL`.
 - Uses the `sbrk(2)` system call to increment the program's data space.
@@ -97,35 +95,6 @@ To build and test the custom memory allocator, follow these steps:
 - `malloc.h`: Header file containing function declarations and necessary includes.
 - `main.c`: Example usage and testing of the custom memory allocator.
 
-## Contributors
-
-- [Inès Beaunoir]
-- [Philomène Lamonnerie]
-
-
-
-
-
-## Features
-
-- **`malloc`:** Allocates a block of memory.
-- **`free`:** Deallocates a previously allocated block of memory.
-- **`calloc`:** Allocates memory and initialize to zero.
-- **`realloc`:** Changes the size of the memory block.
-
-## Getting Started
-
-### Prerequisites
-
-- This project relies on the `brk` and `sbrk` system calls. Ensure your system supports these calls (#include <unistd.h>).
-
-### Compilation instructions
-
-
-### Testing instructions
-
-
-
 
 ### Information
 - What do the brk(2) and sbrk(2) system calls do ?
@@ -134,3 +103,8 @@ To build and test the custom memory allocator, follow these steps:
 - What would be a naïve, unoptimized way to implement the memory allocation system ? Identity possible performance issues.
 - How would you optimize this process with memory footprint in mind ? With time consumption in mind ?
 
+
+## Contributors
+
+- [Inès Beaunoir]
+- [Philomène Lamonnerie]
