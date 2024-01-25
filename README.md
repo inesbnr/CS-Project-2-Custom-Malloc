@@ -10,9 +10,9 @@ In this project, we implement our own malloc(3), free(3), realloc(3) and calloc(
 Before utilizing the custom memory allocator, it's crucial to
 - define which elements will define the bloc of memory
 - initialize the heap using the `initialize_heap()` function. This function sets the global variable `heap_start` to `NULL`.
-'''c
+```c
 void initialize_heap() ;
-'''
+```
 
 ## Features
 
