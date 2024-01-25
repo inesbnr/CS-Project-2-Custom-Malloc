@@ -18,7 +18,7 @@ In this project, we implement our own malloc(3), free(3), realloc(3) and calloc(
 
 ### Prerequisites
 
-- This project relies on the `brk` and `sbrk` system calls. Ensure your system supports these calls.
+- This project relies on the `brk` and `sbrk` system calls. Ensure your system supports these calls (#include <unistd.h>).
 
 ### Compilation instructions
 
