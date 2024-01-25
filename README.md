@@ -98,6 +98,7 @@ To build and test the custom memory allocator, follow these steps:
 
 ### Information
 - What do the brk(2) and sbrk(2) system calls do ?
+   -kjvfdkj
 - Write a diagram of the process memory when users try to allocate data and identity the possible problems
 - When allocating memory, what information should the program store ?
 - What would be a naïve, unoptimized way to implement the memory allocation system ? Identity possible performance issues.
