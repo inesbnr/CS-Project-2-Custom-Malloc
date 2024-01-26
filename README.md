@@ -141,7 +141,7 @@ Test number 2 :
 
 
 
-### Information
+### Steps of the project
 
 - **What do the brk(2) and sbrk(2) system calls do?**
     `brk(2)` and `sbrk(2)` are system calls used to manage a program's memory space. `brk(2)` is used to define the end of the memory space, and `sbrk(2)` is used to dynamically adjust the size of the memory zone.
