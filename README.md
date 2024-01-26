@@ -83,7 +83,7 @@ To build and test the custom memory allocator, follow these steps:
 2. Include the custom malloc header in your source code:
 
    ```c
-   #include "malloc.h"
+   #include "testalloc.h"
    ```
 
 3. Compile your program with the custom malloc implementation.
@@ -91,8 +91,19 @@ To build and test the custom memory allocator, follow these steps:
    ```bash
    gcc -o your_program your_program.c malloc.c
    ```
+   example :
+   ```bash
+   gcc -g testalloc.c -o testalloc
+   ```
 
-4. Execute your program and test the custom memory allocator.
+5. Execute your program and test the custom memory allocator.
+   ```bash
+   ./your_program
+   ```
+   example :
+   ```bash
+   ./testalloc
+   ```
 
 ## Project Structure
 
