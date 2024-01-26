@@ -89,7 +89,7 @@ To build and test the custom memory allocator, follow these steps:
 3. Compile your program with the custom malloc implementation.
 
    ```bash
-   gcc -o your_program your_program.c malloc.c
+   gcc -g your_program.c -o your_program
    ```
    example :
    ```bash
