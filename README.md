@@ -82,7 +82,7 @@ void* calloc(size_t nmemb, size_t size);
 
 ## Improvements
 
-The functions works but there could be optimization process that could be done in the improvedalloc.c file.
+The functions works but there could be optimization process that are done in the improvedalloc.c file.
 
 Free function : 
 Rather than deleting the block with brk, we can mark the block as free=true so it can be reused afterwards. 
