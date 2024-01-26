@@ -122,6 +122,8 @@ To build and test the custom memory allocator, follow these steps:
 - What do the brk(2) and sbrk(2) system calls do ?
    - “brk(2)” and “sbrk(2)”  are both system calls used to manage a program’s memory space . “brk(2)” is used to define the end of the memory space and “sbrk(2)” is used to adjust dynamically the size of the memory zone.
 - Write a diagram of the process memory when users try to allocate data and identity the possible problems
+  ![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/2c0b6d42-cee0-4f38-b96a-5b72438a81d5)
+
 - When allocating memory, what information should the program store ?
 - What would be a naïve, unoptimized way to implement the memory allocation system ? Identity possible performance issues.
 - How would you optimize this process with memory footprint in mind ? With time consumption in mind ?
