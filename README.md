@@ -33,9 +33,7 @@ void* malloc(size_t size);
 - Uses the `sbrk(2)` system call to increment the program's data space.
 - Allocates a new memory block, updates its information, and adds it to the linked list.
 
-  ```markdown
-   !(<img width="1232" alt="Projet Code CS Janv 2024" src="https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/1ecb1eb0-fbc4-4997-abc5-3395df91276d">)
-   ```
+
 
 ### `free`
 
@@ -49,6 +47,9 @@ void free(void* ptr);
 - Retrieves the block information based on the provided pointer.
 - Updates the linked list to remove the block.
 - Uses the `brk(2)` system call to set the end of the data segment.
+
+![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/2e7ce253-9935-43c8-84af-7f9f7fb72632)
+
 
 ### `realloc`
 
