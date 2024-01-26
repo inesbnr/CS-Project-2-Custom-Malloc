@@ -118,15 +118,36 @@ To build and test the custom memory allocator, follow these steps:
 - `main.c`: Example usage and testing of the custom memory allocator.
 
 
-### Information
-- What do the brk(2) and sbrk(2) system calls do ?
-   - “brk(2)” and “sbrk(2)”  are both system calls used to manage a program’s memory space . “brk(2)” is used to define the end of the memory space and “sbrk(2)” is used to adjust dynamically the size of the memory zone.
-- Write a diagram of the process memory when users try to allocate data and identity the possible problems
-  ![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/2c0b6d42-cee0-4f38-b96a-5b72438a81d5)
 
-- When allocating memory, what information should the program store ?
-- What would be a naïve, unoptimized way to implement the memory allocation system ? Identity possible performance issues.
-- How would you optimize this process with memory footprint in mind ? With time consumption in mind ?
+### Information
+
+- **What do the brk(2) and sbrk(2) system calls do?**
+    `brk(2)` and `sbrk(2)` are system calls used to manage a program's memory space. `brk(2)` is used to define the end of the memory space, and `sbrk(2)` is used to dynamically adjust the size of the memory zone.
+
+- **Write a diagram of the process memory when users try to allocate data and identify possible problems**
+  ![Process Memory Allocation](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/6f55ad13-6b01-4626-823f-600e90da71aa)
+
+- **When allocating memory, what information should the program store?**
+  The program should store essential information about each allocated block:
+   - Size
+   - Free status
+   - Pointer
+   - Links to adjacent blocks (prev & next)
+
+- **What would be a naïve, unoptimized way to implement the memory allocation system? Identify possible performance issues.**
+  A naïve approach might involve linear allocation without considering potential fragmentation:
+    - **Linear Allocation:** Allocating memory consecutively without considering the best fit, leading to fragmentation issues.
+    - **No Recycling:** Not reusing freed memory blocks, leading to inefficient memory use.
+    - **No Memory Pool Management:** Lack of sophisticated data structures for managing allocated memory, resulting in inefficiencies.
+
+- **How would you optimize this process with memory footprint in mind? With time consumption in mind?**
+  To optimize the memory allocation process:
+    - **Use Memory Pools:** Implement efficient pool management (segregated free list, buddy system).
+    - **Recycle Freed Blocks:** Reuse freed blocks to minimize fragmentation.
+    - **Implement Best-Fit Strategy:** Choose an allocation strategy based on application characteristics.
+    - **Optimize Linked List Structure:** Faster block management with an optimized data structure.
+    - **Consider Caching:** Improve speed with caching mechanisms for repeated operations.
+    - **Handle Edge Cases:** Implement error handling and address specific scenarios.
 
 
 ## Contributors
