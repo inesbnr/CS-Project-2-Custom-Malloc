@@ -34,7 +34,7 @@ void* malloc(size_t size);
 - Allocates a new memory block, updates its information, and adds it to the linked list.
 
   ```markdown
-   ![Texte alternatif](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/blob/main/malloc.png)
+   !(https://github.com/inesbnr/CS-Project-2-Custom-Malloc/commit/0a582fbabffc24ae50b527fc4b4ff67781f26141)
    ```
 
 ### `free`
