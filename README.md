@@ -111,10 +111,21 @@ To build and test the custom memory allocator, follow these steps:
    ./testalloc
    ```
 
+**TESTING**
+
+Here is an example of the tests we made, we can see that prev and next adress are well linked towards other blocks
+When we free a block, it disappears and links (next & prev) are mooved to other blocks
+
+Test number 1 :
+<img width="232" alt="image" src="https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/98738106/e25f6a9a-019a-4a2b-be1b-785405279323">
+Test number 2 :
+<img width="278" alt="image" src="https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/98738106/59e3b499-883f-4d9c-8461-400faeb987a7">
+
+
 ## Project Structure
 
-- `malloc.c`: Implementation of custom memory allocation functions.
-- `malloc.h`: Header file containing function declarations and necessary includes.
+- `testalloc.c`: Implementation of custom memory allocation functions.
+- `testalloc.h`: Header file containing function declarations and necessary includes.
 - `main.c`: Example usage and testing of the custom memory allocator.
 
 
@@ -141,13 +152,10 @@ To build and test the custom memory allocator, follow these steps:
     - **No Memory Pool Management:** Lack of sophisticated data structures for managing allocated memory, resulting in inefficiencies.
 
 - **How would you optimize this process with memory footprint in mind? With time consumption in mind?**
-  To optimize the memory allocation process:
-    - **Use Memory Pools:** Implement efficient pool management (segregated free list, buddy system).
+  To optimize the memory allocation process, we could do:
     - **Recycle Freed Blocks:** Reuse freed blocks to minimize fragmentation.
-    - **Implement Best-Fit Strategy:** Choose an allocation strategy based on application characteristics.
     - **Optimize Linked List Structure:** Faster block management with an optimized data structure.
-    - **Consider Caching:** Improve speed with caching mechanisms for repeated operations.
-    - **Handle Edge Cases:** Implement error handling and address specific scenarios.
+
 
 
 ## Contributors
