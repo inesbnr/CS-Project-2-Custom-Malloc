@@ -32,6 +32,7 @@ void* malloc(size_t size);
 - If the size is less than or equal to 0, the function returns `NULL`.
 - Uses the `sbrk(2)` system call to increment the program's data space.
 - Allocates a new memory block, updates its information, and adds it to the linked list.
+![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/3de8114a-e9ee-4469-b880-91d0cf955afa)
 
 
 
@@ -63,6 +64,8 @@ void* realloc(void* ptr, size_t size);
 - If `size` is 0, it behaves like `free(ptr)`.
 - If the existing block is larger than the new size, it returns the original pointer.
 - Allocates a new block, copies data from the old block, and frees the old block.
+![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/7d2f40e7-433f-453b-8751-84bf2c785676)
+
 
 ### `calloc`
 
@@ -74,6 +77,9 @@ void* calloc(size_t nmemb, size_t size);
 
 - Uses `malloc` to allocate memory.
 - If successful, initializes all the allocated memory to zero using `memset`.
+
+  ![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/82eccef7-1844-4b0b-b4b5-6f91e5ad1ed0)
+
 
 ## Building and Testing
 
