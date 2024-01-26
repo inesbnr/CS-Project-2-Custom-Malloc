@@ -80,6 +80,17 @@ void* calloc(size_t nmemb, size_t size);
 
   ![image](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/assets/146713404/82eccef7-1844-4b0b-b4b5-6f91e5ad1ed0)
 
+## Improvements
+
+The functions works but there could be optimization process that could be done in the improvedalloc.c file.
+
+Free function : 
+Rather than deleting the block with brk, we can mark the block as free=true so it can be reused afterwards. 
+By merging free blocks we can get big enough blocks to allocate to already existing memory. 
+
+Malloc function: 
+With the free improved function, we merge free blocks together. So now, the malloc function has to check if there are free block to reuse before creating new space directly with sbrk.
+
 
 ## Building and Testing
 
