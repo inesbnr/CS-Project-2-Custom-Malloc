@@ -33,6 +33,10 @@ void* malloc(size_t size);
 - Uses the `sbrk(2)` system call to increment the program's data space.
 - Allocates a new memory block, updates its information, and adds it to the linked list.
 
+  ```markdown
+   ![Texte alternatif](https://github.com/inesbnr/CS-Project-2-Custom-Malloc/blob/main/malloc.png)
+   ```
+
 ### `free`
 
 The `free` function frees the memory associated with a previously allocated block.
